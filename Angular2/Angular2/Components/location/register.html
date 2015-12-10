@@ -1,0 +1,72 @@
+﻿<form (ng-submit)=" gotoConfirm()" [ng-form-model]="form" #f="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Register your details</h1>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-4">
+                    Enter your First Name :
+                </div>
+                <div class="col-xs-8">
+                    <input id="fname" type="text" ng-control="fname" />
+                    <img src="/angular2/Components/location/redwarning.png" style="width:20px" *ng-if="f.form.controls.fname.touched && !f.form.controls.fname.valid" alt="Please enter first name"/>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-4">
+                    Enter your Last Name :
+                </div>
+                <div class="col-xs-8">
+                    <input type="text"id="lname" ng-control="lname"  />
+                    <img src="/angular2/Components/location/redwarning.png" style="width:20px" *ng-if="f.form.controls.lname.touched && !f.form.controls.lname.valid" alt="Please enter Last name" />
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-4">
+                    Address type :
+                </div>
+                <div class="col-xs-8">
+                    <select id="type" ng-control="type">
+                        <option [value]="'home'">Home Address</option>
+                        <option [value]="'billing'">Billing Address</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-4">
+                    Enter your Address
+                </div>
+                <div class="col-xs-8">
+                    <input type="text" id="address" ng-control="address"  />
+                    <img src="/angular2/Components/location/redwarning.png" style="width:20px" *ng-if="f.form.controls.address.touched && !f.form.controls.address.valid" alt="Please enter your Address" />
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-4">
+
+                </div>
+                <div class="col-xs-8">
+                    <button type="submit" [disabled]="!f.form.valid">Next</button>
+                    <img src="/angular2/Components/location/loading_spinner.gif" style="border:0;width:40px;" [hidden]="!showLoading" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+    <title>Angular 2 Demos</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.13/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system-polyfills.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/react/react.js"></script>
+
+    <script src="lib/custom-require.js"></script>
+
+
+    <script>
+        var __React = React;
+        var Dispatcher = require('./node_modules/flux/dist/Flux').Dispatcher;
+        var EventEmitter = require('./node_modules/events/events').EventEmitter;
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
+
+    <script>
+        System.config({
+            defaultJSExtensions: true
+        });
+    </script>
+
+    <script src="https://code.angularjs.org/2.0.0-alpha.46/angular2.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.46/http.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.46/router.dev.js"></script>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+</head>
+<body>
+
+    <demo-app></demo-app>
+
+    <script>System.import('app');</script>
+
+
+</body>
+
+</html>

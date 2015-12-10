@@ -1,0 +1,16 @@
+﻿<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li [class.active]="getLinkStyle('')"><a [router-link]="['/Home']" class="link">Home</a></li>
+                    <li [class.active]="getLinkStyle('/demo')"><a [router-link]="['/Demo/About']" class="link">Routing</a></li>
+                    <li [class.active]="getLinkStyle('/http')"><a [router-link]="['/Http']"  class="link">Http Sample</a></li> 
+                    <li [class.active]="getLinkStyle('/Register')"><a [router-link]="['/Register']" class="link">Location</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>

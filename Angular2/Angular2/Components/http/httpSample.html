@@ -1,0 +1,21 @@
+﻿
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <td><button [style.enabled]="!showLoading" (click)="getData()">Get http data</button><img src="/angular/components/http/loading_spinner.gif" style="border:0;width:40px;" [hidden]="!showLoading" /></td>
+                <td ></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="margin-bottom: 10px;">
+
+                <td>Sample Title text from HTTP service is : {{result.Title}}</td>
+               <td></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

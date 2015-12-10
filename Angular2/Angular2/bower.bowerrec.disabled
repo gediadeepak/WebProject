@@ -1,0 +1,4 @@
+{
+"proxy":"http:/userid:password@proxyurl:port/",
+"https-proxy":"userid:password@proxyurl:port/"
+}

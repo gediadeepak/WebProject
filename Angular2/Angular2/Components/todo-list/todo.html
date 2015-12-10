@@ -1,0 +1,49 @@
+﻿<p>Please enter the item in the list below</p> 
+    <table class="table">
+        <thead>
+            <tr>
+                <td>ToDo list</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ng-for="#list of toDoList; #i = index" style="margin-bottom: 10px;">
+                <td><input type="checkbox" #comleted (change)="completedList(list,comleted.checked,i)" /></td>
+                <td>{{list.name}}</td>
+                <td><button class="btn btn-primary btn-xs" (click)="removeContact(contact)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!--<div class="row" *ng-for="#list of toDoList; #i = index">
+        <div class="col-xs-4">
+            <input type="checkbox" #comleted (change)="completedList(list,comleted.checked,i)" />
+        </div>
+        <div class="col-xs-4">
+            <div style="float:left">{{list.name}}</div>
+        </div>
+        <div class="col-xs-4">
+            <button (click)="removeContact(list)">remove</button>
+        </div>
+    </div>-->
+ 
+<div class="row">
+    <div class="col-xs-3"><input #name placeholder="name" type="text" id="txtTodo" /></div>
+    <div class="col-xs-3"><button (click)="addContact(name.value)">Add</button></div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Completed ToDo list</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ng-for="#list of completed; #i = index" style="margin-bottom: 10px;">
+            
+            <td>{{list.name}}</td>
+            
+        </tr>
+    </tbody>
+</table>

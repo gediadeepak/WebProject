@@ -1,0 +1,17 @@
+﻿<div class="container">
+
+    
+
+    <div>
+        <div class="list-group col-md-3">
+            <a [router-link]="['/Demo/About']" class="list-group-item">About</a>
+            <a [router-link]="['/Demo/ContactUs']" class="list-group-item">Contactus</a>
+            <a [router-link]="['/Demo/ToDoList']" class="list-group-item">Binding</a>
+        </div>
+
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>
